@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <!-- 可塞 script, 但載入會變慢 -->
+    <style>
+      body {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+      }
+      .cardContainer {
+        background-color: burlywood;
+        width: 100%;
+        max-width: 400px;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+          0 6px 6px rgba(0, 0, 0, 0.23);
+      }
+      h3 {
+        width: fit-content;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        color: rgb(39, 39, 39);
+        font-weight: bold;
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05),
+          0 3px 3px rgba(0, 0, 0, 0.23);
+      }
+      .title {
+        background-color: cornsilk;
+        text-align: center;
+        width: fit-content;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        font-weight: bold;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05),
+          0 3px 3px rgba(0, 0, 0, 0.23);
+        display: flex;
+        overflow: hidden;
+      }
+      .textField {
+        flex-grow: 1;
+        border: none;
+        border-right: none;
+        background-color: ebony;
+        border-radius: 0.5rem 0 0 0.5rem;
+        outline: none;
+        /* margin: 0.5rem; */
+        padding: 0.05rem;
+        font-size: 1rem;
+        transition: all 0.3s ease-in-out;
+        /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 3px 3px rgba(0, 0, 0, 0.23); */
+      }
+      button {
+        background-color: lightgreen;
+        border: none;
+        border-left: none;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 0 0.5rem 0.5rem 0;
+        cursor: pointer;
+        /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 3px 3px rgba(0, 0, 0, 0.23); */
+      }
+      ul {
+        margin: 0.5rem;
+        font-weight: bold;
+      }
+      .liWidth {
+        /* width: fit-content; */
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+      }
+      li {
+        list-style: none;
+        background-color: cornsilk;
+        margin: 0.5rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05),
+          0 3px 3px rgba(0, 0, 0, 0.23);
+      }
+      .liStyle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .check {
+        color: lightgreen;
+        background-color: lightgray;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05),
+          0 3px 3px rgba(0, 0, 0, 0.23);
+        /* 可以先設一個初始樣式 */
+      }
+      .delete {
+        background-color: lightgray;
+        border-radius: 0.5rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05),
+          0 3px 3px rgba(0, 0, 0, 0.23);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cardContainer">
+      <h3>待買清單</h3>
+      <div class="title">
+        <input
+          class="textField"
+          type="text"
+          placeholder="輸入項目, 不是科目三"
+        />
+        <button class="addTask">+</button>
+      </div>
+      <ul class="list">
+        <!-- <li class="liWidth"></li> -->
+        <!-- <li class="liWidth">待辦事項一 </li>
+        <li class="liWidth">待辦事項二 </li>
+        <li class="liWidth">待辦事項三 </li> -->
+      </ul>
+    </div>
+    <!-- <script>alert('Hello World!')</script> -->
+    <script src="main.js"></script>
+  </body>
+</html>
